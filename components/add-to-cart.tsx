@@ -1,1 +1,1 @@
-"use client"; import type {Product} from "@/lib/products"; import {useCart} from "./cart-provider"; export function AddToCart({product}:{product:Product}){const{addItem}=useCart();return <button className="button" onClick={()=>addItem(product)}>Add to cart</button>}
+"use client"; import type {Product} from "@/lib/products"; import {useCart} from "./cart-provider"; export function AddToCart({product}:{product:Product}){const{addItem}=useCart();return <button className="button add" onClick={()=>addItem(product)}>Add to bag <span>+</span></button>}
