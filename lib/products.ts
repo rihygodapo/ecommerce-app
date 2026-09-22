@@ -30,7 +30,7 @@ const imageSets = {
   ],
 } as const;
 
-const templates = [
+const templates: [string, string, number, string][] = [
   ["Linen Shirt", "Apparel", 48, "A lightweight everyday shirt with a relaxed fit."],
   ["Canvas Tote", "Accessories", 28, "A durable tote for daily errands."],
   ["Ceramic Mug", "Home", 22, "A simple mug for your morning coffee."],
