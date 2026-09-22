@@ -1,4 +1,1 @@
-"use client";
-import Link from "next/link";
-import {useCart} from "./cart-provider";
-export function Header(){const {items}=useCart();const count=items.reduce((s,i)=>s+i.quantity,0);return <header className="header"><div className="nav container"><Link href="/" className="logo">ShopSimple</Link><nav><Link href="/">Shop</Link><Link href="/cart">Cart ({count})</Link></nav></div></header>;}
+"use client"; import Link from "next/link"; import {useCart} from "./cart-provider"; export function Header(){const{items}=useCart();const count=items.reduce((s:any,i:any)=>s+i.quantity,0);return <header><div className="nav container"><Link href="/" className="logo">ShopSimple</Link><nav><Link href="/">Shop</Link><Link href="/cart">Cart ({count})</Link></nav></div></header>}
