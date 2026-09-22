@@ -1,2 +1,21 @@
-import Link from "next/link"; import type {Product} from "@/lib/products"; import {AddToCart} from "./add-to-cart";
-export function ProductCard({product}:{product:Product}){return <article className="product-card"><Link href={"/products/"+product.id} className={"product-image image-"+product.id}><span>{product.emoji}</span></Link><div className="product-info"><div><p className="eyebrow">{product.category}</p><Link href={"/products/"+product.id}><h3>{product.name}</h3></Link></div><strong>{'$'+product.price.toFixed(2)}</strong></div><div className="card-action"><AddToCart product={product}/></div></article>}
+import Link from "next/link";
+import type { Product } from "@/lib/products";
+import { AddToCart } from "./add-to-cart";
+
+export function ProductCard({ product }: { product: Product }) {
+  return (
+    <article className="product-card">
+      <Link href={`/products/${product.id}`} className="product-image">
+        <img src={product.image} alt={product.name} loading="lazy" />
+      </Link>
+      <div className="product-info">
+        <div>
+          <p className="eyebrow">{product.category}</p>
+          <Link href={`/products/${product.id}`}><h3>{product.name}</h3></Link>
+        </div>
+        <strong>${product.price.toFixed(2)}</strong>
+      </div>
+      <div className="card-action"><AddToCart product={product} /></div>
+    </article>
+  );
+}
