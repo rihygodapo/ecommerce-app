@@ -1,0 +1,8 @@
+export type Product={id:string;name:string;category:string;price:number;emoji:string;description:string};
+export const products:Product[]=[
+{id:"linen-shirt",name:"Linen Shirt",category:"Apparel",price:48,emoji:"👕",description:"A lightweight everyday shirt with a relaxed fit."},
+{id:"canvas-tote",name:"Canvas Tote",category:"Accessories",price:28,emoji:"👜",description:"A durable tote for daily errands and weekend trips."},
+{id:"ceramic-mug",name:"Ceramic Mug",category:"Home",price:22,emoji:"☕",description:"A simple handmade-style mug for your morning coffee."},
+{id:"desk-lamp",name:"Desk Lamp",category:"Home",price:64,emoji:"💡",description:"A compact modern lamp for focused work and reading."},
+{id:"sneakers",name:"Everyday Sneakers",category:"Footwear",price:86,emoji:"👟",description:"Comfortable low-profile sneakers designed for daily wear."},
+{id:"headphones",name:"Studio Headphones",category:"Tech",price:129,emoji:"🎧",description:"Comfortable over-ear headphones with a clean, balanced sound."}];
