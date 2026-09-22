@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { CartProvider } from "@/components/cart-provider";
+import { Header } from "@/components/header";
+export const metadata: Metadata = { title:"ShopSimple", description:"A simple Next.js ecommerce starter." };
+export default function RootLayout({children}:{children:React.ReactNode}) {
+  return <html lang="en"><body><CartProvider><Header/><main>{children}</main></CartProvider></body></html>;
+}
